@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.static{
+    position: static;
+    top: 0;
+    border: 3px solid;
+    border-color: green;
+
+}

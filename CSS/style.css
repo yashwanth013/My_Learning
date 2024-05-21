@@ -1,0 +1,77 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+#main-id {
+  background-color: rgb(53, 4, 56);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  height: 200px;
+}
+
+.navbar {
+  
+position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(24, 99, 102);
+  border-radius: 20px;
+  color: rgb(243, 238, 235);
+  
+}
+.left {
+  
+  font-size: 1.5rem;
+}
+.right ul {
+  display: flex;
+
+  border-radius: 20px;
+  margin: 20px;
+  color: rgb(144, 18, 182);
+}
+.right ul li {
+  list-style: none;
+  margin: 5px;
+}
+button.right {
+  border-radius: 20px;
+  border-color: blue;
+  color: rgb(88, 11, 88);
+  margin: 5px;
+  background-color: aquas;
+}
+
+.left {
+  
+  font-size: 1.2rem;
+}
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  margin: 23px 0;
+}
+.firstSection div {
+  width: 30%;
+}
+
+.rightSection img {
+  width: 80%;
+  margin: 50px 0;
+}
+.Expeo {
+  display: flex;
+  justify-content: space-around;
+  margin: 23px 0;
+}
+.referme {
+  display: flex;
+  justify-content: space-around;
+  margin: 23px 0;
+}
+.box {
+  margin: 10px;
+  justify-content: space-around;
+}
