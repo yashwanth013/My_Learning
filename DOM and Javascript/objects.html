@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo1"></p>
+    <script>
+      const car = {
+        name: "volvo",
+        type: "sports",
+        color: "red",
+        model: 500,
+      };
+
+      document.getElementById("demo").innerHTML = car.type;
+
+      //new keyword
+      const iplTeam = new Object();
+      iplTeam.name = "CSK";
+      iplTeam.captian = "MSD";
+      iplTeam.trophies = 5;
+      iplTeam.franchise = "Chennai";
+      document.getElementById("demo2").innerHTML =
+        iplTeam.trophies + " WON " + iplTeam.name;
+
+      const person2 = {
+        firstName: "john",
+        lastName: "doe",
+        age: 35,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo3").innerHTML =
+        " fullName of person2 is " + person2.fullName();
+      person2.nationality = "English";
+      delete person2.age;
+      console.log(person2);
+
+      const myObj = {
+        firstName: "yash",
+        age: 21,
+        myCars: {
+          car1: "BMW",
+          car2: "MUSTANG",
+          car3: "Fortuner",
+        },
+      };
+
+      myObj.myCars.car1;
+      myObj.lastName = "Kantha";
+      myObj.fullName = function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+      };
+      console.log(myObj);
+      document.getElementById("demo4").innerHTML = myObj;
+      let text = "";
+      for (let i in myObj) {
+        text += myObj[i] + " ";
+      }
+      document.getElementById("demo4").innerHTML = text;
+
+      //new object
+      const person = { name: "john", age: 50, eycolor: "blue", birthdate: 20 };
+
+      let text1 = "";
+      for (let [properties, value] of Object.entries(person)) {
+        text1 += properties + " : " + value + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = text1;
+    </script>
+  </body>
+</html>
