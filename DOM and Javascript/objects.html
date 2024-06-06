@@ -49,9 +49,9 @@
         firstName: "yash",
         age: 21,
         myCars: {
-          car1: "BMW",
-          car2: "MUSTANG",
-          car3: "Fortuner",
+          car: "BMW",
+          car: "MUSTANG",
+          car: "Fortuner",
         },
       };
 
@@ -63,9 +63,11 @@
       console.log(myObj);
       document.getElementById("demo4").innerHTML = myObj;
       let text = "";
-      for (let i in myObj) {
-        text += myObj[i] + " ";
+      for (let carKey in myObj.myCars) {
+        let car = myObj.myCars[carKey];
+        text += `<h2>${car.make} ${car.model}</h2>`;
       }
+
       document.getElementById("demo4").innerHTML = text;
 
       //new object

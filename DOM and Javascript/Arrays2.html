@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays 2</title>
+  </head>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The push() Method</h2>
+
+    <p>The push method appends a new element to an array.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      const fruits = ["Banana", "Orange", "Apple"];
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        fruits.push("Lemon");
+        document.getElementById("demo").innerHTML = fruits;
+      }
+
+      let x = "";
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let i in myObj.cars) {
+        x += "<h2>" + myObj.cars[i].name + "</h2>";
+        for (let j in myObj.cars[i].models) {
+          x += myObj.cars[i].models[j] + "<br>";
+        }
+      }
+
+      document.getElementById("demo1").innerHTML = x;
+    </script>
+  </body>
+</html>
