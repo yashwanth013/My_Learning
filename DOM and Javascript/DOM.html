@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+      transform: circle;
+    }
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+    }
+  </style>
+  <body>
+    <form style="display: flex; gap: 10px; flex-direction: column" name="User">
+      Fname :<input
+        id="f-name"
+        name="fName"
+        type="text"
+        placeholder="Enter your fName"
+        oninput="upperCase()"
+      />
+
+      Lname:
+      <input
+        id="l-name"
+        name="lName"
+        type="text"
+        placeholder="Enter your lName"
+        onchange="upperCase()"
+      />
+      <button type="button" onclick="return submitoption()">Submit</button>
+      <p id="demo"></p>
+    </form>
+
+    <script>
+      document.getElementById("f-name").style.backgroundColor = "blue";
+      function submitoption() {
+        let x = document.getElementById("f-name")?.value;
+        let y = document.getElementById("l-name")?.value;
+        let text = "";
+        if (
+          (x && y == 0) ||
+          (x.length && y.length > 20) ||
+          (x && y == Number)
+        ) {
+          text =
+            "Input is large or you cant add number or Input cannot be nothing";
+        } else {
+          text = "Input is submitted";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+      function upperCase() {
+        let x = document.getElementById("f-name");
+        let y = document.getElementById("l-name");
+        x.value = x.value.toUpperCase();
+        y.value = y.value.toUpperCase();
+      }
+    </script>
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+      <div id="animate"></div>
+    </div>
+
+    <script>
+      function myMove() {
+        let id = null;
+        const elem = document.getElementById("animate");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+            elem.style.right = pos + "px";
+          }
+        }
+      }
+    </script>
+
+    <h2>The onclick attribute</h2>
+    <h2 onclick="changetext(this)">Click on ME!</h2>
+    <script>
+      function changetext(id) {
+        id.innerHTML = "Oops!";
+      }
+    </script>
+
+    <button id="btn1">Click Me!</button>
+    <p id="demo1"></p>
+    <script>
+      document.getElementById("btn1").onclick = displayDate;
+      function displayDate() {
+        document.getElementById("demo1").innerHTML = Date();
+      }
+    </script>
+
+    <div
+      id="demo2"
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse over Me
+    </div>
+    <script>
+      function mOver() {
+        document.getElementById("demo2").innerHTML = "Thank You";
+      }
+      function mOut() {
+        document.getElementById("demo2").innerHTML = "Mouse over Me";
+      }
+    </script>
+  </body>
+</html>

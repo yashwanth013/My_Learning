@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections</title>
+  </head>
+  <body>
+    <p>one</p>
+    <p>two</p>
+    <p>threee</p>
+    <p>four</p>
+    <p id="demo"></p>
+    <script>
+      const myCollection = document.getElementsByTagName("p");
+      console.log(myCollection);
+      let cLen = myCollection.length;
+      console.log(myCollection.length);
+      document.getElementById("demo").innerHTML = myCollection[0].innerHTML;
+      for (i = 0; i < cLen; i++) {
+        myCollection[i].style.color = "red";
+      }
+    </script>
+  </body>
+</html>

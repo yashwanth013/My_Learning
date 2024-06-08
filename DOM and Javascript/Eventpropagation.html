@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bubble and capture</title>
+  </head>
+  <style>
+    #div1,
+    #div2 {
+      background-color: coral;
+      padding: 50px;
+    }
+
+    #para1,
+    #para2 {
+      background-color: white;
+      font-size: 20px;
+      border: 1px solid;
+      padding: 20px;
+    }
+    #myDIV {
+      background-color: coral;
+      border: 1px solid;
+      padding: 50px;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <div id="div1">
+      <h2>Bubbling</h2>
+      <p id="para1">Click Me!</p>
+    </div>
+
+    <div id="div2">
+      <h2>Capturing</h2>
+      <p id="para2">Click Me!</p>
+    </div>
+    <script>
+      document.getElementById("div1").addEventListener(
+        "click",
+        function () {
+          alert("you clicked div1");
+        },
+        false
+      );
+      document.getElementById("div2").addEventListener(
+        "click",
+        function () {
+          alert("you clicked div2");
+        },
+        true
+      );
+      document.getElementById("para1").addEventListener(
+        "click",
+        function () {
+          alert("you clicked para1");
+        },
+        false
+      );
+      document.getElementById("para2").addEventListener(
+        "click",
+        function () {
+          alert("you clicked para2");
+        },
+        true
+      );
+    </script>
+    <script></script>
+    <h2>JavaScript removeEventListener()</h2>
+
+    <div id="myDIV">
+      <p>
+        This div element has an onmousemove event handler that displays a random
+        number every time you move your mouse inside this orange field.
+      </p>
+      <p>Click the button to remove the div's event handler.</p>
+      <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div>
+
+    <p id="random"></p>
+
+    <script>
+      document
+        .getElementById("myDIV")
+        .addEventListener("mousemove", myFunction);
+
+      function myFunction() {
+        document.getElementById("random").innerHTML = Math.random();
+      }
+
+      function removeHandler() {
+        document
+          .getElementById("myDIV")
+          .removeEventListener("mousemove", myFunction);
+      }
+    </script>
+  </body>
+</html>
