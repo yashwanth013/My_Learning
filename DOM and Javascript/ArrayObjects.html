@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects Array..</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const cars = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 },
+      ];
+      document.getElementById("demo").innerHTML = cars;
+      function myFunction() {
+        cars.sort(function (a, b) {
+          return a.year - b.year;
+        });
+      }
+      document.getElementById("demo").innerHTML = cars[];
+    </script>
+  </body>
+</html>
