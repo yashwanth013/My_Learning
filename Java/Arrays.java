@@ -25,6 +25,24 @@ public class Arrays {
 
         System.out.println("The average age is: " + avg);
 
-    }
+        int[][] myNumbers = { { 1, 2, 3, 4 }, { 5, 6, 7 } };
+        System.out.println(myNumbers[1][2]);
+        myNumbers[1][2] = 9;
+        System.out.println(myNumbers[1][2]);
 
+        int[][] myNumbers1 = { { 1, 2, 3, 4 }, { 5, 6, 7 } };
+        for (int i = 0; i < myNumbers1.length; ++i) {
+            for (int j = 0; j < myNumbers1[i].length; ++j) {
+                System.out.println(myNumbers1[i][j]);
+
+                int[][] myNumbers2 = { { 1, 2, 3, 4 }, { 5, 6, 7 } };
+                for (int[] row : myNumbers2) {
+                    for (int m : row) {
+                        System.out.println(m);
+                    }
+                }
+
+            }
+        }
+    }
 }
