@@ -50,4 +50,9 @@ public class Arrays {
 
         throw new UnsupportedOperationException("Unimplemented method 'sort'");
     }
+
+    public static char[] tostring(int[] setNums) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'tostring'");
+    }
 }
