@@ -6,6 +6,7 @@ public class Arraystask {
 
     public static void main(String[] args) {
         int[] setNums = { 4, 25, 10, 7, 9, 4, 23, 47, 13, 5, 20, 21 };
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number : ");
         int n = scanner.nextInt();

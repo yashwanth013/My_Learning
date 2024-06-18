@@ -2,7 +2,7 @@ package Java;
 
 import java.util.*;
 
-public class Arraystask3 {
+public class Arrayask3 {
     public static void main(String[] args) {
         int[] setNums = { 4, 25, 10, 7, 9, 4, 23, 47, 13, 5, 20, 21 };
         @SuppressWarnings("resource")
@@ -20,6 +20,8 @@ public class Arraystask3 {
                     newArray[j] = setNums[j];
                 }
                 newArray[setNums.length] = n; // Add the new number
+                newArray[12] = n;
+                newArray[13] = n;
                 setNums = newArray; // Assign the new array to setNums
 
                 System.out.println("Number added to the array.");
