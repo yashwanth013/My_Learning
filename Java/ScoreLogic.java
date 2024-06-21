@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class ScoreLogic {
     static int sizeOover = 6;
+    static int numofOver = 2;
 
-    public int calculateScore(String teamName) {
-        int numofOver = 2;
+    public int calculateScore(String teamName, Scanner scanner) {
 
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the score of " + teamName);
         int totalscore = 0;
         int score = 0;
@@ -34,7 +33,6 @@ public class ScoreLogic {
             System.out.println("Total Score after " + (i + 1) + " over is : " + totalscore);
         }
 
-        scanner.close();
         return totalscore;
     }
 }

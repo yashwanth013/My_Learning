@@ -24,4 +24,14 @@ public class Main {
         System.out.println("Hello " + name2);
 
     }
+
+    public void fullThrottle() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'fullThrottle'");
+    }
+
+    public void speed(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'speed'");
+    }
 }
