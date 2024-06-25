@@ -9,6 +9,11 @@ public class Constructor2 {
         modelName = name;
     }
 
+    public Constructor2() {
+        modelYear = 2024;
+        modelName = "name";
+    }
+
     public static void main(String[] args) {
         Constructor2 Obj = new Constructor2(1969, "Mustang");
         System.out.println(Obj.modelYear + " " + Obj.modelName);
